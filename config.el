@@ -18,7 +18,26 @@
  ;; doom-variable-pitch-font (font-spec :family "Avenir Next" :size 18)
  prettier-js-args '("--single-quote"))
 
+;; Org mode
+;; (http://www.johnborwick.com/2019/02/23/org-todo-setup.html#org559e557)
 
+(setq org-default-notes-file "~/Dropbox/org/inbox.org")
+
+(setq
+ org-ellipsis " ▾ "
+ org-bullets-bullet-list '("·")
+ org-tags-column -80
+ org-log-done 'time
+ org-refile-targets
+  '((("~/Dropbox/org/main-todo.org") :maxlevel . 3)
+    (("~/Dropbox/org/projects.org") :maxlevel . 3)
+    (("~/Dropbox/org/backlog.org") :maxlevel . 3)
+    (("~/Dropbox/org/now.org") :maxlevel . 3)
+    )
+  org-agenda-files (list
+  "~/Dropbox/org/inbox.org"
+  "~/Dropbox/org/main-todo.org"
+  "~/Dropbox/org/projects.org"))
 
 ;; Load other config files
 ;; (load! "+org")
