@@ -9,3 +9,5 @@
 (package! prettier-js)
 (package! vue-mode)
 (package! org-fancy-priorities)
+(package! org-super-agenda)
+(package! wakatime-mode)
